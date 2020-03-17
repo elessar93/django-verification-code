@@ -6,7 +6,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 setup(
     name='django-verification-code',
-    version='0.1',
+    version='0.2',
     packages=['codigo'],
     description='Phone verification with twilio',
     long_description=README,
