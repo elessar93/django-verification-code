@@ -1,10 +1,7 @@
 from random import randint
 
-from django.contrib.auth import get_user_model
-from django.shortcuts import render
-
 from django.conf import settings
-
+from django.contrib.auth import get_user_model
 # Create your views here.
 from rest_framework import status
 from rest_framework.permissions import AllowAny
@@ -77,6 +74,9 @@ class VerificaCodigo(APIView):
         if cs.exists():
             if get_user_model().objects.filter(telefono=telefono).exists():
                 u = get_user_model().objects.get(telefono=telefono)
+                if hasattr(u, 'verificado'):
+                    u.verificado = True
+                    u.save()
                 cs.delete()
                 response_data = {'result': 1, "pk": u.pk}
             else:
