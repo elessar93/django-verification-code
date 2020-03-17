@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: django-verification-code
-Version: 0.1
+Version: 0.2
 Summary: Phone verification with twilio
 Home-page: https://git-codecommit.us-east-2.amazonaws.com/v1/repos/django-verification-code
 Author: Rafael Cardenas
