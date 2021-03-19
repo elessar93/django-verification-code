@@ -16,7 +16,7 @@ setup(
     license='MIT',
     install_requires=[
         'Django>2',
-        'djangorestframework==3.11.0',
+        'djangorestframework==3.11.2',
         'twilio==6.35.2'
     ]
 )
